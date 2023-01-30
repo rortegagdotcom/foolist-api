@@ -1,6 +1,6 @@
-import { RequestHandler } from "express";
+import { RequestHandler } from 'express';
 
-import Task from "../models/Task";
+import Task from '../models/Task';
 
 export const getTasks: RequestHandler = async (req, res) => {
   try {
@@ -25,7 +25,7 @@ export const createTask: RequestHandler = async (req, res) => {
   try {
     const taskFound = await Task.findOne({ name: req.body.name });
     if (taskFound)
-      return res.status(403).json({ message: "The task already exists" });
+      return res.status(403).json({ message: 'The task already exists' });
 
     const task = new Task(req.body);
     const savedTask = await task.save();

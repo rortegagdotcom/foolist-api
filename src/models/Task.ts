@@ -1,4 +1,4 @@
-import { Schema, model } from "mongoose";
+import { Schema, model } from 'mongoose';
 
 const taskSchema = new Schema(
   {
@@ -18,4 +18,4 @@ const taskSchema = new Schema(
   }
 );
 
-export default model("Task", taskSchema);
+export default model('Task', taskSchema);
